@@ -1,0 +1,16 @@
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/jaxb/model/ValueXML.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/jaxb/model/DataXML.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/jaxb/model/DocumentationXML.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/ws/PastisSAX2Handler.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/jaxb/model/OptionalXML.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/ws/PastisResource.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/jaxb/model/ZeroOrMoreXML.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/jaxb/model/AnnotationXML.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/util/RNGConstants.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/jaxb/model/ElementXML.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/jaxb/model/OneOrMoreXML.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/jaxb/model/AttributeXML.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/model/ElementProperties.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/ws/PastisRestApplication.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/model/ElementRNG.java
+/home/paulo/Projects/CINES/pastis/pastis-rest-api/src/main/java/fr/cines/pac/pastis/jaxb/model/BaliseXML.java

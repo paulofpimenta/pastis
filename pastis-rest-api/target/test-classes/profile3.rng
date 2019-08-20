@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<rng:grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:seda="fr:gouv:culture:archivesdefrance:seda:v2.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="fr:gouv:culture:archivesdefrance:seda:v2.1"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="fr:gouv:culture:archivesdefrance:seda:v2.1">
+  <rng:start>
+    <rng:element name="ArchiveTransfer">
+
+      <rng:optional>
+        <rng:attribute name="id">
+          <rng:data type="ID"/>
+        </rng:attribute>
+      </rng:optional>    
+      <rng:zeroOrMore>
+        <rng:element name="ArchiveUnit">
+          <rng:attribute name="id" seda:profid="id294404">
+            <rng:data type="ID"/>
+          </rng:attribute>
+              <rng:element name="ArchiveUnitRefId" a:defaultValue="id386134">
+                <rng:data type="NCName"/>
+              </rng:element>
+        </rng:element>
+      </rng:zeroOrMore>
+
+
+      <!-- ArchiveTransfer / ArchivalAgency -->
+      <rng:element name="ArchivalAgency">
+        <rng:element name="Identifier">
+          <rng:value>Identifier4</rng:value>
+        </rng:element>
+      </rng:element>
+      <!-- ArchiveTransfer /TransferringAgency -->
+      <rng:element name="TransferringAgency">
+        <rng:element name="Identifier">
+          <rng:value>Identifier5</rng:value>
+        </rng:element>
+      </rng:element>
+    </rng:element>
+  </rng:start>
+
+
+  <rng:define name="any_content">
+    <rng:interleave>
+      <rng:zeroOrMore>
+        <rng:ref name="any_element"/>
+      </rng:zeroOrMore>
+      <rng:text/>
+    </rng:interleave>
+  </rng:define>
+  <rng:define name="any_element">
+    <rng:element>
+      <rng:anyName/>
+      <rng:ref name="any_attributes"/>
+      
+      <rng:zeroOrMore>
+        <rng:ref name="any_content"/>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  <rng:define name="any_attributes">
+    <rng:zeroOrMore>
+      <rng:attribute>
+        <rng:anyName/>
+      </rng:attribute>
+    </rng:zeroOrMore>
+  </rng:define>
+
+  <rng:define name="OpenType">
+    <rng:zeroOrMore>
+      <rng:element>
+        <rng:anyName/>
+        <rng:zeroOrMore>
+          <rng:attribute>
+            <rng:anyName/>
+          </rng:attribute>
+        </rng:zeroOrMore>
+      </rng:element>
+    </rng:zeroOrMore>
+  </rng:define>
+</rng:grammar>

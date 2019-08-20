@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<rng:grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:seda="fr:gouv:culture:archivesdefrance:seda:v2.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="fr:gouv:culture:archivesdefrance:seda:v2.1"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="fr:gouv:culture:archivesdefrance:seda:v2.1">
+  <rng:start>
+    <rng:element name="ArchiveTransfer">
+      <rng:zeroOrMore>
+        <rng:attribute>
+          <rng:anyName>
+            <rng:except>
+              <rng:nsName/>
+              <rng:nsName ns=""/>
+            </rng:except>
+          </rng:anyName>
+        </rng:attribute>
+      </rng:zeroOrMore>
+      <rng:optional>
+        <rng:attribute name="id">
+          <rng:data type="ID"/>
+        </rng:attribute>
+      </rng:optional>
+      <rng:element name="Comment">
+        <rng:data type="string"/>
+      </rng:element>
+      <rng:element name="Date">
+        <rng:data type="dateTime"/>
+      </rng:element>
+      <rng:element name="MessageIdentifier">
+        <rng:optional>
+          <rng:attribute name="schemeDataURI">
+            <rng:data type="anyURI"/>
+          </rng:attribute>
+        </rng:optional>
+        <rng:optional>
+          <rng:attribute name="schemeID">
+            <rng:data type="token"/>
+          </rng:attribute>
+        </rng:optional>
+        <rng:optional>
+          <rng:attribute name="schemeAgencyName">
+            <rng:data type="string"/>
+          </rng:attribute>
+        </rng:optional>
+        <rng:data type="token"/>
+      </rng:element>
+      <rng:element name="CodeListVersions">
+        <rng:optional>
+          <rng:attribute name="id">
+            <rng:data type="ID"/>
+          </rng:attribute>
+        </rng:optional>
+        <rng:optional>
+          <rng:element name="StorageRuleCodeListVersion">
+            <rng:optional>
+              <rng:attribute name="listName">
+                <rng:data type="string"/>
+              </rng:attribute>
+            </rng:optional>
+            <rng:optional>
+              <rng:attribute name="listAgencyID">
+                <rng:data type="token"/>
+              </rng:attribute>
+            </rng:optional>
+            <rng:optional>
+              <rng:attribute name="listSchemeURI">
+                <rng:data type="anyURI"/>
+              </rng:attribute>
+            </rng:optional>
+            <rng:value type="token"> StorageRuleCodeListVersion0 </rng:value>
+          </rng:element>
+        </rng:optional>
+      </rng:element>
+      <rng:element name="ArchivalAgency">
+        <rng:element name="Identifier">
+          <rng:value>CINES</rng:value>
+        </rng:element>
+      </rng:element>
+      <rng:element name="TransferringAgency">
+        <rng:element name="Identifier">
+          <rng:text/>
+        </rng:element>
+      </rng:element>
+    </rng:element>
+  </rng:start>
+</rng:grammar>

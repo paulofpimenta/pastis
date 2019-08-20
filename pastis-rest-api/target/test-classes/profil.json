@@ -1,0 +1,25 @@
+{"name":"ArchiveTransfer","type":"element","cardinality":null,"valuleOrData":null,"dataType":null,"value":null,"children":[
+	{"name":null,"type":"attribute","cardinality":"zeroOrMore","valuleOrData":"nsName","dataType":null,"value":null,"children":[]},
+	{"name":"id","type":"attribute","cardinality":"optional","valuleOrData":"data","dataType":"ID","value":null,"children":[]},
+	{"name":"Comment","type":"element","cardinality":null,"valuleOrData":"data","dataType":"string","value":null,"children":[]},
+	{"name":"Date","type":"element","cardinality":null,"valuleOrData":"data","dataType":"dateTime","value":null,"children":[]},
+	{"name":"MessageIdentifier","type":"element","cardinality":null,"valuleOrData":"data","dataType":"token","value":null,"children":[
+		{"name":"schemeDataURI","type":"attribute","cardinality":"optional","valuleOrData":"data","dataType":"anyURI","value":null,"children":[]},
+		{"name":"schemeID","type":"attribute","cardinality":"optional","valuleOrData":"data","dataType":"token","value":null,"children":[]},
+		{"name":"schemeAgencyName","type":"attribute","cardinality":"optional","valuleOrData":"data","dataType":"string","value":null,"children":[]}
+	]},
+	{"name":"CodeListVersions","type":"element","cardinality":null,"valuleOrData":null,"dataType":null,"value":null,"children":[
+		{"name":"id","type":"attribute","cardinality":"optional","valuleOrData":"data","dataType":"ID","value":null,"children":[]},
+		{"name":"StorageRuleCodeListVersion","type":"element","cardinality":"optional","valuleOrData":"value","dataType":"token","value":" StorageRuleCodeListVersion0 ","children":[
+			{"name":"listName","type":"attribute","cardinality":"optional","valuleOrData":"data","dataType":"string","value":null,"children":[]},
+			{"name":"listAgencyID","type":"attribute","cardinality":"optional","valuleOrData":"data","dataType":"token","value":null,"children":[]},
+			{"name":"listSchemeURI","type":"attribute","cardinality":"optional","valuleOrData":"data","dataType":"anyURI","value":null,"children":[]}
+		]}
+	]},
+	{"name":"ArchivalAgency","type":"element","cardinality":null,"valuleOrData":null,"dataType":null,"value":null,"children":[
+		{"name":"Identifier","type":"element","cardinality":null,"valuleOrData":"value","dataType":null,"value":"CINES","children":[]}
+	]},
+	{"name":"TransferringAgency","type":"element","cardinality":null,"valuleOrData":null,"dataType":null,"value":null,"children":[
+		{"name":"Identifier","type":"element","cardinality":null,"valuleOrData":null,"dataType":null,"value":null,"children":[]}
+	]}
+]}
